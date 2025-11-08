@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+<body>
+    <form action="success.html">
+        <caption>Student Registration System</caption><br>
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" name="firstname" required><br>
+        <label for="ln">Last Name:</label>
+        <input type="text" id="ln" name="lastname" required><br>
+        <label for="gn">Gender:</label>
+        <input type="radio" name="gen" value="male">Male
+        <input type="radio" name="gen" value="female">Female
+        <input type="radio" name="gen" value="other">Other<br>
+        <label>Email:</label>
+        <input type="email" required><br>
+        <label>Contact:</label>
+        <input type="tel" pattern="[0-9]{10}"><br>
+        <label>Date of Birth:</label>
+        <input type="date"><br>
+        <label>Address:</label>
+        <textarea rows="10"></textarea><br>
+        <label>Languages Known:</label>
+        <input type="checkbox" value="Telugu">Telugu
+        <input type="checkbox" value="English">English
+        <input type="checkbox" value="Tamil">Tamil
+        <input type="checkbox" value="Hindi">Hindi
+        <input type="checkbox" value="Kilikisthan">Kilikisthan<br>
+        <label>Branch:</label>
+        <select>
+            <option>-----</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="AIDS">AIDS</option>
+            <option value="CSIT">CSIT</option>
+            <option value="ME">ME</option>
+        </select><br>
+        <label>Resume/Photo:</label>
+        <input type="file"><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

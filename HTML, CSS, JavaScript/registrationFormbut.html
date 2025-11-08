@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+  <form name="myForm" onsubmit="validateForm(event)">
+    <label>Full Name: </label>
+    <input type="text" name="fname">
+    <span id="nameError" class="error"></span><br><br>
+
+    <label>Username: </label>
+    <input type="text" name="username">
+    <span id="usernameError" class="error"></span><br><br>
+
+    <label>Password: </label>
+    <input type="password" name="password">
+    <span id="passwordError" class="error"></span><br><br>
+
+    <label>Confirm Password: </label>
+    <input type="password" name="confirmPassword">
+    <span id="confirmPasswordError" class="error"></span><br><br>
+
+    <label>Email: </label>
+    <input type="text" name="email">
+    <span id="emailError" class="error"></span><br><br>
+
+    <label>Mobile: </label>
+    <input type="text" name="mobile">
+    <span id="mobileError" class="error"></span><br><br>
+
+    <label>Date of Birth: </label>
+    <input type="date" name="dob">
+    <span id="dobError" class="error"></span><br><br>
+
+    <label>Gender: </label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <span id="genderError" class="error"></span><br><br>
+
+    <label>Address: </label>
+    <textarea name="address"></textarea>
+    <span id="addressError" class="error"></span><br><br>
+
+    <label>Pincode: </label>
+    <input type="text" name="pincode">
+    <span id="pincodeError" class="error"></span><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+  <script>
+    let fullname = document.forms["myForm"]["fname"].value.trim();
+      let username = document.forms["myForm"]["username"].value.trim();
+      let password = document.forms["myForm"]["password"].value;
+      let confirmPassword = document.forms["myForm"]["confirmPassword"].value;
+      let email = document.forms["myForm"]["email"].value.trim();
+      let mobile = document.forms["myForm"]["mobile"].value.trim();
+      let dob = document.forms["myForm"]["dob"].value;
+      let gender = document.forms["myForm"]["gender"].value;
+      let address = document.forms["myForm"]["address"].value.trim();
+      let pincode = document.forms["myForm"]["pincode"].value.trim();
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Demo</title>
+</head>
+<body>
+    <script>
+        var x=100;
+        document.write(x, "<br>");
+        var x=200;
+        document.write(x, "<br>");
+        document.write(x+x, "<br>");//value updated
+        let y=300;
+        document.write(y, "<br>");
+        //let y=500;
+        //document.write(y, "<br>");//let prevents updation of variable's values
+        /*var z=30;//global declaration
+        document.write(z, "<br>");
+        {
+            var z=40;//local declaration
+            document.write(z, "<br>");
+        }
+        document.write(z, "<br>");//shows 40*///This is called Global Polluting issue
+        
+        /*let z=30;//global declaration
+        document.write(z, "<br>");
+        {
+            let z=40;//local declaration
+            document.write(z, "<br>");
+        }
+        document.write(z, "<br>");//shows 30*/
+        const i=25;
+        document.write(i, "<br>");
+        /*const i=35;
+        document.write(i, "<br>");*///can't be used
+        {
+            const i=45;
+            document.write(i, "<br>")
+        }
+        document.write(i, "<br>");
+        let a=10;
+        let b=0.2;
+        let c=true;
+        d="sridevi";
+        e=null;
+        document.write(typeof(a));
+        document.write(typeof(b));
+        document.write(typeof(c));
+        document.write(typeof(d));
+        document.write(typeof(e));
+        document.write("<br>");
+        var m =50;
+        document.writeln(m);
+        m+=10;
+        document.writeln(m);
+        var n =5;
+        n++;
+        document.writeln(n);
+        //function kl_fun(){
+            //document.writeln("This call is from kl_fun()");
+        //}
+        function kl_fun(){
+            return "This is from KL University";
+        }
+        kl_fun();
+        document.write(kl_fun());
+        document.write(typeof 100, "<br>");
+        document.write(typeof 12.5678, "<br>");
+        document.write(typeof "Aditya", "<br>");
+        document.write(typeof Aditya, "<br>");
+        document.write(typeof [], "<br>");
+        document.write(typeof {}, "<br>");
+        document.write(typeof kl_fun(), "<br>");
+        document.write(typeof 100n, "<br>");
+    </script>
+</body>
+</html>

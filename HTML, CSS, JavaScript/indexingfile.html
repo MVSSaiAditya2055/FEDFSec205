@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Project</title>
+
+  <!-- Task 1: Favicon (base64 icon) -->
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAA...">
+
+  <!-- Task 2: CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    p {
+      color: #e74c3c;
+      font-size: 18px;
+    }
+    button {
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #jasmine {
+      margin-top: 50px;
+    }
+  </style>
+
+  <!-- Jasmine CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jasmine-core@4.6.0/lib/jasmine-core/jasmine.css">
+</head>
+<body>
+
+  <h1 id="title">Hello, Final Project!</h1>
+  <p id="p">Initial text</p>
+  <button id="btn">Click me</button>
+
+  <!-- Jasmine Test Runner -->
+  <div id="jasmine"></div>
+
+  <!-- Task 3,4,5: JS -->
+  <script>
+    // Task 5: Watch variable
+    let p = "Watching this variable";
+
+    // Task 3 & 4: JS error + pause on exception
+    document.getElementById('btn').addEventListener('click', () => {
+      try {
+        undefinedFunction(); // Deliberate error
+      } catch (error) {
+        console.error("Error caught:", error); // JS error logged in DevTools
+      }
+      document.getElementById('p').textContent = "Button clicked!";
+    });
+  </script>
+
+  <!-- Jasmine Core -->
+  <script src="https://cdn.jsdelivr.net/npm/jasmine-core@4.6.0/lib/jasmine-core/jasmine.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jasmine-core@4.6.0/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jasmine-core@4.6.0/lib/jasmine-core/boot0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jasmine-core@4.6.0/lib/jasmine-core/boot1.js"></script>
+
+  <!-- Task 6 & 7: Jasmine Specs -->
+  <script>
+    describe("Final Project Tests", () => {
+      it("Test 1: add numbers correctly", () => {
+        function add(a, b) { return a + b; }
+        expect(add(2, 3)).toBe(5);
+      });
+      it("Test 2: subtract numbers correctly", () => {
+        function subtract(a, b) { return a - b; }
+        expect(subtract(5, 2)).toBe(3);
+      });
+    });
+  </script>
+
+</body>
+</html>
